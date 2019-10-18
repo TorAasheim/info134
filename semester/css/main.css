@@ -1,48 +1,65 @@
+
 body {
     font: 15px/1.5 Arial;
-    padding:0;
     margin: 0;
 }
 
 header {
-    background: #999;
+    display: flex;
+    flex-direction: column;
+    background: #223349;
     color: white;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #E05B3F 4px solid;
-    opacity: 1;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    max-height: 70px;
+    border-bottom: #777f8c 4px solid;
 }
 
+header a{
+  font-size:12px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+}
+#favoritt{
+margin-top: 5px;
+}
 .container{
   width: 85%;
   margin:auto;
   overflow: hidden;
+  z-index:1;
 }
 
-
 header h1{
-    margin: 0;
-    display: inline;
+    display: flex;
+    flex-direction: row;
 }
 
 nav ul{
   margin: 0;
-  display: inline;
+  display: flex;
+  flex-direction: row;
 }
 
-  nav ul li{
-    background: #999;
-    display: inline;
+  nav ul p{
+    background: #223349;
     list-style-type: none;
-    padding: 0 10px 0 10px;
+    padding-top: 2px;
+    padding-right: 15px;
+    padding-bottom: 8px;
+
   }
 
-  nav ul li a {
-    color: white;
+  nav ul p a {
+  color: white;
   }
 
 header #brand{
+  font-size: 14px;
+  padding-bottom:20px;
   float: left;
+  max-height: 70px;
 }
 
 header nav{
@@ -51,12 +68,301 @@ header nav{
 }
 
 header a:hover{
-  font-weight: bold;
+  color: #DE1B1B;
 }
 
-#map {
-  width: 40%;
-  height: 400px;
-  background-color: grey;
+.wrapper{
+  padding-top:70px;
+  display: flex;
+  flex-flow: row wrap;
 
+}
+
+.listeliste{
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  width: 20%;
+  height: 20%;
+  padding: 5%;
+  background-color: #cccccc;
+  text-align: center;
+  margin: 5%;
+
+}
+
+.listeliste2{
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  width: 20%;
+  height: 20%;
+  padding: 5%;
+  background-color: #cccccc;
+  text-align: center;
+  margin: 5%;
+  list-style: none;
+}
+
+a img{
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
+  width: 100%;
+}
+
+a img p{
+  display: flex;
+  flex-direction: column;
+}
+
+
+#map1 {
+  width: 40%;
+  height: 800px;
+  background-color: grey;
+  top: 10px;
+  left: 10px;
+  display:flex;
+  flex-direction: row;
+
+}
+
+#Sort{
+  display: inline-flex;
+  flex-direction: row;
+}
+
+#mapDistance {
+  width: 40%;
+  height: 800px;
+  background-color: white;
+  top: 10px;
+  left: 10px;
+  display:flex;
+  flex-direction: row;
+
+}
+
+#frontPage {
+  background-image: url(../media/bryggen4.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  top: 150%;
+  left: 50%;
+  padding-bottom: 1350px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  z-index:-1
+}
+
+#innhold {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 90px;
+  width: 40%;
+  right: 10%;
+  font-size: 18px;
+    }
+
+#bryggenBilder{
+  display: flex;
+  flex-direction: column;
+}
+.bryggenSlides {
+  width: 100%;
+  bottom: 10%;
+}
+
+#bryggenTekst{
+  display: flex;
+  flex-direction: column;
+}
+
+
+h2 {
+  position: absolute;
+  padding-top: 200px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+
+}
+
+h2 span {
+  color: white;
+  font: bold 24px/45px Helvetica;
+  letter-spacing: -1px;
+  background: rgba(0, 0, 0, 0.7) ;
+  display: flex;
+  justify-content: center;
+  max-width: 400px;
+  min-width: 300px;
+  margin-left: 40%;
+  margin-right: 40%;
+
+
+}
+
+/** mediaquerie for mobiler */
+@media only screen
+  and (max-device-width: 420px)
+  and (max-device-height: 830px)
+ {
+  #frontPage{
+  background-image: url("../media/bryggen7.jpg");
+  background-repeat: no-repeat;
+  padding-top: 70px;
+  top: 120%;
+  padding-bottom: 1000px;
+  }
+
+  h2 span {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+}
+
+/** mediaquerie for mobiler horisontalt */
+@media only screen
+  and (min-device-width: 550px)
+  and (max-device-width: 750px)
+  and (min-device-height: 300px)
+  and (max-device-height: 420px)
+ {
+  #frontPage{
+  background-image: url("../media/bryggen3.jpg");
+  background-repeat: no-repeat;
+  padding-top: 70px;
+  top: 120%;
+  padding-bottom: 650px;
+  }
+
+h2 span {
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+}
+
+#brand {
+  font-size: 10px;
+}
+
+
+span{
+ max-width: 10%;
+}
+
+
+/** tablets vertikalt */
+@media only screen
+  and (min-device-width: 760px)
+  and (max-device-width: 810px)
+  and (min-device-height: 1020px)
+  and (max-device-height: 1300px)
+ {
+    #frontPage{
+    background-image: url("../media/bryggen9.jpg");
+    background-repeat: no-repeat;
+    padding-top: 70px;
+    top: 110%;
+    padding-bottom: 1000px;
+  }
+h2 span {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+}
+  /** Stasjonære */
+@media only screen
+  and (min-device-width: 1200px)
+ {
+    #frontPage{
+    background-image: url("../media/bryggen4.jpg");
+    background-repeat: no-repeat;
+    padding-top: 70px;
+    height:160%;
+    top:140%;
+    padding-bottom: 1100px;
+  }
+}
+
+#toalettInnhold{
+  display:flex;
+  flex-direction: row;
+}
+
+#map2 {
+  display:flex;
+  flex-direction: column;
+  width: 40%;
+  height: 800px;
+  background-color: grey;
+  top: 10px;
+  left: 10px;
+}
+#map3 {
+  display:flex;
+  flex-direction: column;
+  width: 40%;
+  height: 800px;
+  background-color: grey;
+  top: 10px;
+  left: 10px;
+}
+table, td, th{
+  border: 1px solid black;
+}
+#lekeplassInnhold{
+  display:flex;
+  flex-direction: row;
+}
+
+#tb{
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  border: 2px;
+  font-size: 10px;
+}
+
+#Filterbox{
+  display: inline-flex;
+}
+
+.Valg{
+  display:flex;
+  flex-direction: row;
+  display: inline-block;
+  border: 1px solid #777f8c;
+}
+
+#resultat{
+  display:flex;
+  flex-direction: row;
+    top: 10px;
+}
+#Lekeplass_navn{
+  display:flex;
+  flex-direction: row;
+    top: 10px;
+}
+#Lekeplass_avstand{
+  display:flex;
+  flex-direction: row;
+    top: 10px;
+}
+
+#innhold1{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100px;
+  width: 40%;
+  right: 10%;
+  font-size: 16px;
 }

@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Favoritt Toalett</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script async defer src="js/script.js"> </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWfdtTHyvYjfRoBO84b7lRnGd0yw6oP_w"> </script>
+  </head>
+  <body onload="loadJSON()">
+
+  <header>
+    <div class="container">
+      <div id="brand">
+        <h1> Favoritt Toalett </h1>
+      </div>
+
+      <nav>
+        <ul>
+          <p><a href="index.html" >Hjem</a></p>
+          <p><a href="lokasjoner.html">Lokasjoner</a></p>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+<div id="mapDistance">    </div>
+<div id="innhold">
+    <Select id="favoritt"> </Select>   <button type="button" onclick="findClosest()" > Finn nærmeste lekeplass </button>
+    <div id="lekeplassAvstand" >
+      <p>Den nærmeste lekeplassen er: <p id="Lekeplass_navn"> </p> </p>
+      <p>  og den ligger  <p id="Lekeplass_avstand"> </p><p> Km unna </p></p>
+    </div>
+    <div id="toalettAvstand">
+        <p>Ditt valgte toalett har plassering: <p id="favorittPlassering"> </p> </p>
+        <p > Åpnings tider hverdag: <p id="apningHverdag"> </p></p>
+        <p> Åpningstid lørdager: <p id="apningLordag"></p></p>
+        <p> Åpningstid søndag: <p id="apningSondag"> </p></p>
+    </div>
+</div>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<HTML>
+  <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/main.css">
+        <title>Toalettkart</title>
+        <script async defer src="js/script.js"> </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWfdtTHyvYjfRoBO84b7lRnGd0yw6oP_w"> </script>
+  </head>
+  <body onload="loadJSON()">
+    <header>
+      <div class="container">
+        <div id="brand">
+        <h1> Toalettkart </h1>
+        </div>
+
+        <nav>
+          <ul>
+            <p><a href="index.html">Hjem</a></p>
+            <p><a href="lokasjoner.html">Lokasjoner</a></p>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+    <div id="Filterbox">
+        <form>
+          <fieldset>
+            <div class="Valg">
+              <label for="Kvinne">Kvinne</label>
+              <input class="check" type="checkbox" id="Kvinne" name="Toalett" value="Kvinne" onchange="checkSok()">
+            </div>
+
+            <div class="Valg">
+              <label for="Mann">Mann</label>
+              <input class="check" type="checkbox" id="Mann" name="Toalett" value="Mann" onchange="checkSok()">
+            </div>
+
+            <div class="Valg">
+              <label for="Stellerom">Stellerom</label>
+              <input class="check" type="checkbox" id="Stellerom" name="Toalett" value="Stellerom" onchange="checkSok()">
+            </div>
+
+            <div class="Valg">
+              <label for="Åpent">Åpent nå</label>
+              <input class="check" type="checkbox" id="aapentNa" name="Toalett" value="Åpent" onchange="checkSok()">
+            </div>
+
+            <div class="Valg">
+              <label for="ÅpenKlokkeslett">Åpent klokken</label>
+              <input type="time" id="aapenKL" style="width:70px" name="Klokkeslettåpen" maxlength="5">
+              <input type="checkbox" id="aapenKl" name="Toalett" value="ÅpenKlokkeslett" onchange="checkSok()">
+            </div>
+
+            <div class="Valg">
+              <label for="Handicap">Handicap</label>
+              <input class="check" type="checkbox" id="Handicap" name="Toalett" value="Handicap" onchange="checkSok()">
+            </div>
+
+            <div class="Valg">
+              <label for="maksPris">Maks pris</label>
+              <input class="check" type="checkbox" id="MaxPris" name="Toalett" value="MaxPris" onchange="checkSok()">
+            </div>
+
+            <div class="Valg">
+              <label for="Gratis">Gratis</label>
+              <input class="check"  type="checkbox" id="Gratis" name="Toalett" value="Gratis" onchange="checkSok()">
+            </div>
+
+          </fieldset>
+        </form>
+      </div>
+
+    <div class="search-container">
+        <form >
+          <input id="input" type="text" placeholder="Søk på navn" name="filter" onkeyup="filterTable()">
+          <button type="button" onclick="window.location.reload()">reset </button>
+          <input id="inputReg" type="text" placeholder="kjøn:herre eller dame" >
+          <button type="button" onclick="scan()" > Hurtig søk </button>
+        </form>
+    </div>
+
+    <div id="toalettInnhold">
+        <div id="map2">    </div>
+        <div id="tb">
+          <ol id="table"> </ol>
+        </div>
+    </div>
+
+
+
+        </body>
+</HTML>

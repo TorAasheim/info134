@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<title>Spesifisitet i CSS</title>
+<meta charset="utf-8">
+<!-- importer CSS-dokumentet -->
+</head>
+<body>
+<p> 0 </p>
+<div>
+<p> 1 </p>
+<p> 2 </p>
+</div>
+<div>
+<div>
+<p> 3 </p>
+</div>
+</div>
+</body>
+<style>
+
+
+body p { /* (1) */
+color: black;
+}
+html p { /* (2) */
+color: cyan;
+}
+div p { /* (3) */
+color: green;
+}
+div div p { /* (4) */
+color: black;
+}
+div div { /* (5) */
+color: red;
+}
+</style>
+
+<ol id="listen">
+</ol>
+
+<script>
+/*
+function enumerate(report){
+  for(var i = 99; i >= 0; i--){
+    report("det står " + i + " flasker på veggen.");
+  }
+}*/
+enumerate(function (sentence) {
+if (sentence === "Det står 0 flasker på veggen.") {
+console.log("Tomt!");
+}
+});
+
+ function addRepost(message) {
+ var newElement = document.createElement("li");
+ newElement.innerHTML = message;
+ var targetElement = document.getElementById("listen");
+ 	targetElement.appendChild(newElement);
+}
+
+</script>
+</body>
+</html>

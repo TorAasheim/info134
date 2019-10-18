@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Rom-Uib</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script async defer src="js/script.js"> </script>
+  </head>
+  <body onload="loadUib()">
+
+  <header>
+    <div class="container">
+      <div id="brand">
+        <h1> Rom Uib </h1>
+      </div>
+      <nav>
+        <ul>
+          <p><a href="index.html" >Hjem</a></p>
+          <p><a href="lokasjoner.html">Lokasjoner</a></p>
+        </ul>
+      </nav>
+    </div>
+  </header>
+      <div id="Filterbox">
+          <form>
+            <fieldset>
+              <h1> Velg fakultet </h1>
+              <div class="Valg">
+                <label for="HF/JUS">HF/JUS</label>
+                <input class="check" type="checkbox" id="HF/JUS"  onchange="initTableUib()">
+              </div>
+
+              <div class="Valg">
+                <label for="PSYK/SV">PSYK/SV</label>
+                <input class="check" type="checkbox" id="PSYK/SV" onchange="initTableUib()">
+              </div>
+
+              <div class="Valg">
+                <label for="MN">MN</label>
+                <input class="check" type="checkbox" id="MN" onchange="initTableUib()">
+              </div>
+
+              <div class="Valg">
+                <label for="MED">MED</label>
+                <input class="check" type="checkbox" id="MED" onchange="initTableUib()">
+              </div>
+
+              <div class="Valg">
+                <label for="ANDRE">ANDRE</label>
+                <input class="check"  type="checkbox" id="ANDRE" onchange="initTableUib()">
+              </div>
+
+              <div class="Valg">
+                <label for="Reset">Reset</label>
+                <input class="check" type="checkbox" id="Reset" onchange="window.location.reload()">
+              </div>
+        </fieldset>
+      </form>
+      </div>
+
+      <div id="Sort">
+            <form>
+              <fieldset>
+                <h1> Sorter etter:</h1>
+                <div class="Valg">
+                  <label for="Navn">Navn</label>
+                  <input class="check" type="checkbox" id="sortNavn"  onchange="sorterEtterNavn()">
+                </div>
+
+                <div class="Valg">
+                  <label for="Auditorium">Auditorium</label>
+                  <input class="check" type="checkbox" id="sortAuditorium"  onchange="sorterRom()">
+                </div>
+
+                <div class="Valg">
+                  <label for="Lesesal">Lesesal</label>
+                  <input class="check" type="checkbox" id="sortLesesal"  onchange="sorterRom()">
+                </div>
+
+                <div class="Valg">
+                  <label for="Moterom">Møterom</label>
+                  <input class="check" type="checkbox" id="sortMoterom"  onchange="sorterRom()">
+                </div>
+
+                <div class="Valg">
+                  <label for="Seminar">Seminarrom</label>
+                  <input class="check" type="checkbox" id="sortSeminar"  onchange="sorterRom()">
+                </div>
+
+                <div class="Valg">
+                  <label for="Reset">Reset</label>
+                  <input class="check" type="checkbox" id="Reset" onchange="window.location.reload()">
+                </div>
+
+              </fieldset>
+            </form>
+        </div>
+
+      <div id="tb">
+        <ol id="romTable"> </ol>
+      </div>
+
+    </body>
+</html>
